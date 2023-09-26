@@ -1,3 +1,5 @@
+import rootStyles from "~/assets/styles/main.css";
+
 import { cssBundleHref } from "@remix-run/css-bundle";
 import {
   isRouteErrorResponse,
@@ -15,6 +17,7 @@ import type { LinksFunction } from "@remix-run/node";
 /* ---------------------------------- Links --------------------------------- */
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: rootStyles },
 ];
 
 /* -------------------------------------------------------------------------- */
