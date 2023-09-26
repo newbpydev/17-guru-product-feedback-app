@@ -5,5 +5,5 @@ node_modules
 /public/build
 .env
 
-/app/assets/styles/main.css
-/app/assets/styles/main.css.map
+app/assets/styles/main.css
+app/assets/styles/main.css.map

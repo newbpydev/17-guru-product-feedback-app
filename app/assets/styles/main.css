@@ -124,4 +124,10 @@ body {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+}
+
 /*# sourceMappingURL=main.css.map */
