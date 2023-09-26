@@ -1,18 +1,25 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
 import {
+  isRouteErrorResponse,
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteError,
 } from "@remix-run/react";
 
+import type { LinksFunction } from "@remix-run/node";
+
+/* ---------------------------------- Links --------------------------------- */
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                                     App                                    */
+/* -------------------------------------------------------------------------- */
 export default function App() {
   return (
     <html lang="en">
@@ -31,3 +38,14 @@ export default function App() {
     </html>
   );
 }
+
+/* -------------------------------------------------------------------------- */
+/*                               Error Boundary                               */
+/* -------------------------------------------------------------------------- */
+export const ErrorBoundary = () => {
+  const error = useRouteError();
+
+  if (isRouteErrorResponse(error)) {
+    return <h1>There was an error root level</h1>;
+  }
+};
