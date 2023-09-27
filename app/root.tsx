@@ -1,3 +1,4 @@
+import icon from "~/assets/icons/favicon-32x32.png";
 import rootStyles from "~/assets/styles/main.css";
 
 import { cssBundleHref } from "@remix-run/css-bundle";
@@ -13,11 +14,11 @@ import {
 } from "@remix-run/react";
 
 import type { LinksFunction } from "@remix-run/node";
-
 /* ---------------------------------- Links --------------------------------- */
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: rootStyles },
+  { type: "image/png", rel: "icon", sizes: "32x32", href: icon },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -29,6 +30,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Frontend Mentor | Product feedback app</title>
         <Meta />
         <Links />
       </head>
