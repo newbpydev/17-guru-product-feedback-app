@@ -1,3 +1,6 @@
+import FeedbackMainNav from "~/components/navigation/FeedbackMainNav";
+import FeedbackSideNav from "~/components/navigation/FeedbackSideNav";
+
 /* -------------------------------------------------------------------------- */
 /*                                Feedback Page                               */
 /* -------------------------------------------------------------------------- */
@@ -5,7 +8,9 @@ export default function FeedbackPage() {
   // output
   return (
     <main className="feedback-page">
-      <h1 className="feedback-page__heading">Hi from Feedback</h1>
+      <FeedbackSideNav />
+
+      <FeedbackMainNav />
     </main>
   );
 }

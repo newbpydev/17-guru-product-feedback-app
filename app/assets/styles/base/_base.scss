@@ -22,19 +22,8 @@ html {
 
 body {
   @include m.body();
+  background-color: var(--color-surface);
 
   min-height: 100vh;
   width: 100vw;
 }
-
-// h1 {
-//   font-size: 1.8rem;
-//   font-weight: 700;
-//   letter-spacing: -0.25px;
-// }
-
-// h2 {
-//   font-size: 1.5rem;
-//   font-weight: 700;
-//   letter-spacing: -0.187px;
-// }

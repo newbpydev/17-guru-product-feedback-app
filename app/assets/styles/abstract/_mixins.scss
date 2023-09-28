@@ -6,7 +6,9 @@
   align-items: $align;
 }
 
-/* ---------------------------------- Body ---------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Body                                    */
+/* -------------------------------------------------------------------------- */
 @mixin body($is-body1: true, $is-semibold: false) {
   color: var(--color-accent);
   font-family: 'Jost', sans-serif;
@@ -14,11 +16,19 @@
   line-height: normal;
 
   @if $is-body1 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+
+    @include media-query(48em) {
+      font-size: 1.6rem;
+    }
   }
 
   @else {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+
+    @include media-query(48em) {
+      font-size: 1.5rem;
+    }
   }
 
   @if $is-semibold {
