@@ -1,0 +1,80 @@
+/* ----------------------------- Flex Container ----------------------------- */
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* ---------------------------------- Body ---------------------------------- */
+@mixin body($is-body1: true, $is-semibold: false) {
+  color: var(--color-accent);
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  line-height: normal;
+
+  @if $is-body1 {
+    font-size: 1.6rem;
+  }
+
+  @else {
+    font-size: 1.5rem;
+  }
+
+  @if $is-semibold {
+    font-weight: 600;
+  }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Heading                                  */
+/* -------------------------------------------------------------------------- */
+@mixin heading($level: h1) {
+  font-weight: 700;
+
+  @if $level ==h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.25px;
+
+    @include media-query(48em) {
+      font-size: 2.4rem;
+      letter-spacing: -0.333px;
+    }
+  }
+
+  @else if $level ==h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.187px;
+
+    @include media-query(48em) {
+      font-size: 2rem;
+      letter-spacing: -0.25px;
+    }
+  }
+
+  @else if $level ==h3 {
+    font-size: 1.3rem;
+    letter-spacing: -0.181px;
+
+    @include media-query(48em) {
+      font-size: 1.8rem;
+      letter-spacing: -0.25px;
+    }
+  }
+
+  @else if $level ==h4 {
+    font-size: 1.3rem;
+
+    @include media-query(48em) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* ------------------------------- Media Query ------------------------------ */
+@mixin media-query($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

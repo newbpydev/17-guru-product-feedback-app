@@ -1,4 +1,19 @@
-:root {}
+@use '../abstract/mixins' as m;
+
+:root {
+  /* --------------------------------- Colors --------------------------------- */
+  --color-primary: #AD1FEA;
+  --color-secondary: #4661E6;
+  --color-tertiary: #373F68;
+  --color-white: #FFFFFF;
+  --color-background: #F2F4FF;
+  --color-surface: #F7F8FD;
+  --color-accent: #3A4374;
+  --color-heading: #647196;
+  --color-warning: #F49F85;
+  --color-danger: #D73737;
+  --color-info: #62BCFA;
+}
 
 html {
   font-size: 62.5%;
@@ -6,25 +21,20 @@ html {
 }
 
 body {
-  font-family: "Jost", sans-serif;
-  font-size: 1.6rem;
-  line-height: normal;
-  font-weight: 400;
+  @include m.body();
 
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
-h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.25px;
+// h1 {
+//   font-size: 1.8rem;
+//   font-weight: 700;
+//   letter-spacing: -0.25px;
+// }
 
-
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.187px;
-}
+// h2 {
+//   font-size: 1.5rem;
+//   font-weight: 700;
+//   letter-spacing: -0.187px;
+// }
