@@ -1,6 +1,7 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
-import { redirect, type } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import { redirect } from "@remix-run/node";
+
+// import { Link } from "@remix-run/react";
 
 /* ---------------------------------- Meta ---------------------------------- */
 export const meta: MetaFunction = () => {
