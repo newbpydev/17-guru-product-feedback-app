@@ -1,3 +1,11 @@
+@use '../../abstract/mixins' as m;
+
 .feedback-filter-card {
   width: 22.3rem;
+
+  @include m.flex-container() {
+    gap: .8rem;
+    flex-wrap: wrap;
+  }
+
 }

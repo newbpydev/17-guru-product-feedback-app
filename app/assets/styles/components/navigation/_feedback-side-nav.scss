@@ -4,9 +4,41 @@
   display: flex;
   @include m.flex-container(column, center, start);
 
+  &__board-group {
+    position: relative;
+    width: 100vw;
+    z-index: 10;
+  }
+
+  & svg {
+    position: absolute;
+    top: 2.737rem;
+    right: 2.4rem;
+
+    @include m.media-query(48em) {
+      display: none;
+    }
+  }
+
+  &__menu-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background-color: rgba(0, 0, 0, .5);
+    @include m.flex-container(row, end)
+  }
+
 
   &__filter-map-wrapper {
-    padding: 2.4rem;
+    background-color: var(--color-background);
+    height: 100vh;
+    padding: 9.6rem 2.4rem 2.4rem;
     width: 27.1rem;
+
+    @include m.flex-container(column, start, stretch) {
+      gap: 2.4rem;
+    }
   }
 }

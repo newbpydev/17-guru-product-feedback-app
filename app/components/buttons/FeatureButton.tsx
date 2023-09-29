@@ -1,11 +1,13 @@
+import Button from "./Button";
+
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {}
 
 //* COMPONENT: FeatureButton
 export default function FeatureButton({ children, ...rest }: Props) {
   // output
   return (
-    <button className="feature-button" {...rest}>
+    <Button className="feature-button" {...rest}>
       {children}
-    </button>
+    </Button>
   );
 }

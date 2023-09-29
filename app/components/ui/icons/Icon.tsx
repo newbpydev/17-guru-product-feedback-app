@@ -1,4 +1,4 @@
-interface Props extends SVGSVGElement {
+interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   iconName:
     | "close"
     | "hamburger"
@@ -50,7 +50,7 @@ export default function Icon({
           height={customHeight || "17"}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g fill={fill || "#FFF"} fill-rule="evenodd">
+          <g fill={fill || "#FFF"} fillRule="evenodd">
             <path d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z" />
           </g>
         </svg>
@@ -63,7 +63,7 @@ export default function Icon({
           height={customHeight || "17"}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g fill={fill || "#FFF"} fill-rule="evenodd">
+          <g fill={fill || "#FFF"} fillRule="evenodd">
             <path d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z" />
           </g>
         </svg>
@@ -81,7 +81,7 @@ export default function Icon({
             stroke="#4661E6"
             stroke-width="2"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           />
         </svg>
       );
@@ -98,7 +98,7 @@ export default function Icon({
             stroke="#4661E6"
             stroke-width="2"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           />
         </svg>
       );
@@ -129,7 +129,7 @@ export default function Icon({
           <path
             d="M2.62 16H1.346l.902-.91c.486-.491.79-1.13.872-1.823C1.036 11.887 0 9.89 0 7.794 0 3.928 3.52 0 9.03 0 14.87 0 18 3.615 18 7.455c0 3.866-3.164 7.478-8.97 7.478-1.017 0-2.078-.137-3.025-.388A4.705 4.705 0 012.62 16z"
             fill={fill || "#CDD2EE"}
-            fill-rule="nonzero"
+            fillRule="nonzero"
           />
         </svg>
       );
@@ -155,12 +155,12 @@ export default function Icon({
               <stop stop-color="#28A7ED" offset="100%" />
             </radialGradient>
           </defs>
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <circle fill="url(#a)" cx="20" cy="20" r="20" />
             <path
               d="M19.512 15.367l4.975 4.53-3.8 5.54L11.226 29l4.485-4.1c.759.275 1.831.026 2.411-.594a1.958 1.958 0 00-.129-2.82c-.836-.745-2.199-.745-2.964.068-.57.607-.767 1.676-.44 2.381L11 28.713c.255-1.06.683-2.75 1.115-4.436l.137-.531c.658-2.563 1.287-4.964 1.287-4.964l5.973-3.415zM23.257 12L28 16.443l-2.584 2.606-4.89-4.583L23.257 12z"
               fill={fill || "#FFF"}
-              fill-rule="nonzero"
+              fillRule="nonzero"
             />
           </g>
         </svg>
@@ -187,11 +187,11 @@ export default function Icon({
               <stop stop-color="#28A7ED" offset="100%" />
             </radialGradient>
           </defs>
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <circle fill="url(#a)" cx="28" cy="28" r="28" />
             <path
               fill={fill || "#FFF"}
-              fill-rule="nonzero"
+              fillRule="nonzero"
               d="M30.343 36v-5.834h5.686v-4.302h-5.686V20h-4.597v5.864H20v4.302h5.746V36z"
             />
           </g>
@@ -209,7 +209,7 @@ export default function Icon({
           <text
             transform="translate(-24 -20)"
             fill={fill || "#F2F4FE"}
-            fill-rule="evenodd"
+            fillRule="evenodd"
             font-family="Jost-Bold, Jost"
             font-size="14"
             font-weight="bold"
@@ -224,5 +224,5 @@ export default function Icon({
   }
 
   // output
-  return <>{icon}</>;
+  return <div {...rest}>{icon}</div>;
 }
