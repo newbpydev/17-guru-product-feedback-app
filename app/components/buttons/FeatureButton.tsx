@@ -6,7 +6,7 @@ interface Props extends React.HTMLAttributes<HTMLButtonElement> {}
 export default function FeatureButton({ children, ...rest }: Props) {
   // output
   return (
-    <Button className="feature-button" {...rest}>
+    <Button className="feature-button" theme="ui" {...rest}>
       {children}
     </Button>
   );

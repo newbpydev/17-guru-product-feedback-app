@@ -10,3 +10,13 @@ export type IconType =
   | "new-feedback"
   | "plus"
   | "circle";
+
+export type ThemeType =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "danger"
+  | "ui"
+  | "ui-dark";
+
+export type LinkThemeType = "light" | "dark";

@@ -1,6 +1,10 @@
+@use '../../abstract/mixins' as m;
+
 .feedback-main-header {
   background-color: var(--color-tertiary);
   color: var(--color-white);
   padding: .8rem 2.4rem;
+
+  @include m.flex-container(row, space-between) {}
 
 }

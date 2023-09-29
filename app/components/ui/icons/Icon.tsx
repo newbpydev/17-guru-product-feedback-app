@@ -1,23 +1,12 @@
-import { IconType } from "~/types/components.type";
+import type { IconType } from "~/types/components.type";
 
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
-  // iconName:
-  //   | "close"
-  //   | "hamburger"
-  //   | "arrow-down"
-  //   | "arrow-left"
-  //   | "arrow-up"
-  //   | "check"
-  //   | "comments"
-  //   | "edit-feedback"
-  //   | "new-feedback"
-  //   | "plus"
-  //   | "circle";
   iconName: IconType;
 
   customHeight?: number;
   customWidth?: number;
   fill?: string;
+  strokeColor?: string;
 }
 
 //* COMPONENT: Icon
@@ -26,6 +15,7 @@ export default function Icon({
   customHeight,
   customWidth,
   fill,
+  strokeColor,
   ...rest
 }: Props) {
   let icon: React.ReactElement<SVGSVGElement>;
@@ -64,13 +54,17 @@ export default function Icon({
     case "arrow-down":
       icon = (
         <svg
-          width={customWidth || "20"}
-          height={customHeight || "17"}
+          width={customWidth || "10"}
+          height={customHeight || "7"}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g fill={fill || "#FFF"} fillRule="evenodd">
-            <path d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z" />
-          </g>
+          <path
+            d="M1 1l4 4 4-4"
+            stroke={strokeColor || "#4661E6"}
+            strokeWidth="2"
+            fill="none"
+            fillRule="evenodd"
+          />
         </svg>
       );
       break;
@@ -85,7 +79,7 @@ export default function Icon({
           <path
             d="M6 9L2 5l4-4"
             stroke="#4661E6"
-            stroke-width="2"
+            strokeWidth="2"
             fill="none"
             fillRule="evenodd"
           />
@@ -103,7 +97,7 @@ export default function Icon({
           <path
             d="M1 6l4-4 4 4"
             stroke="#4661E6"
-            stroke-width="2"
+            strokeWidth="2"
             fill="none"
             fillRule="evenodd"
           />
@@ -121,7 +115,7 @@ export default function Icon({
           <path
             fill="none"
             stroke="#AD1FEA"
-            stroke-width="2"
+            strokeWidth="2"
             d="M1 5.233L4.522 9 12 1"
           />
         </svg>
@@ -235,9 +229,9 @@ export default function Icon({
             transform="translate(-24 -20)"
             fill={fill || "#F2F4FE"}
             fillRule="evenodd"
-            font-family="Jost-Bold, Jost"
-            font-size="14"
-            font-weight="bold"
+            fontFamily="Jost-Bold, Jost"
+            fontSize="14"
+            fontWeight="bold"
           >
             <tspan x="24" y="27.5">
               +

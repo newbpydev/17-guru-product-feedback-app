@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import Fade from "../animation/Fade";
 import FeedbackBoardCard from "../cards/FeedbackBoardCard";

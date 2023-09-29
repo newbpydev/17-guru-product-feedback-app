@@ -19,9 +19,9 @@ export default function Fade({ in: inProp, children }: Props) {
 
   const transitionStyles: { [key: string]: React.CSSProperties } = {
     entering: { opacity: 1 },
-    entered: { opacity: 1 },
+    entered: { opacity: 1, zIndex: 0 },
     exiting: { opacity: 0 },
-    exited: { opacity: 0 },
+    exited: { opacity: 0, zIndex: -200 },
   };
 
   // output
