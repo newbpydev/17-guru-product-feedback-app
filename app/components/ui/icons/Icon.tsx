@@ -1,16 +1,19 @@
+import { IconType } from "~/types/components.type";
+
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
-  iconName:
-    | "close"
-    | "hamburger"
-    | "arrow-down"
-    | "arrow-left"
-    | "arrow-up"
-    | "check"
-    | "comments"
-    | "edit-feedback"
-    | "new-feedback"
-    | "plus"
-    | "circle";
+  // iconName:
+  //   | "close"
+  //   | "hamburger"
+  //   | "arrow-down"
+  //   | "arrow-left"
+  //   | "arrow-up"
+  //   | "check"
+  //   | "comments"
+  //   | "edit-feedback"
+  //   | "new-feedback"
+  //   | "plus"
+  //   | "circle";
+  iconName: IconType;
 
   customHeight?: number;
   customWidth?: number;
