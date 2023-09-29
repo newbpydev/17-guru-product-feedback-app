@@ -1,0 +1,18 @@
+@use '../../abstract/mixins' as m;
+
+.feedback-board-card {
+  padding: 1.6rem 2.4rem;
+  color: var(--color-white);
+
+
+  background-image: url('/assets/images/suggestions/mobile/background-header.png');
+  width: 100%;
+
+  &__heading {
+    @include m.heading(h2);
+  }
+
+  &__subheading {
+    font-weight: 500;
+  }
+}

@@ -1,5 +1,5 @@
 //* COMPONENT: FeedbackMainNav
 export default function FeedbackMainNav() {
   // output
-  return <header className="main-feedback-header">FeedbackMainNav</header>;
+  return <header className="feedback-main-header">FeedbackMainNav</header>;
 }

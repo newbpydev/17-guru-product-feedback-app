@@ -2,7 +2,11 @@
 
 .feedback-side-nav {
   display: flex;
-  @include m.flex-container(column, center, left);
+  @include m.flex-container(column, center, start);
 
-  &__filter-map-wrapper {}
+
+  &__filter-map-wrapper {
+    padding: 2.4rem;
+    width: 27.1rem;
+  }
 }
