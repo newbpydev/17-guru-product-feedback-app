@@ -7,4 +7,12 @@
 
   @include m.flex-container(row, space-between) {}
 
+  &__sort-button {
+    padding: 1.05rem 0rem;
+
+    &>span {
+      margin-right: .8rem;
+    }
+  }
+
 }

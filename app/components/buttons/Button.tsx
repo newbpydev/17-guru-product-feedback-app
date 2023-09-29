@@ -1,4 +1,5 @@
 import classNames from "classnames";
+
 import type { ThemeType } from "~/types/components.type";
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
@@ -16,7 +17,7 @@ export default function Button({
 
   // output
   return (
-    <button className={clsNames} {...rest}>
+    <button className={clsNames} {...rest} type="button">
       {children}
     </button>
   );

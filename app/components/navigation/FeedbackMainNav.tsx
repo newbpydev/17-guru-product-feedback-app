@@ -6,10 +6,10 @@ export default function FeedbackMainNav() {
   // output
   return (
     <header className="feedback-main-header">
-      <div className="feedback-main-header__sort">
+      <Button theme="ui-dark" className="feedback-main-header__sort-button">
         Sort by : <span>Most Upvotes</span>
         <Icon iconName="arrow-down" strokeColor="#fff" />
-      </div>
+      </Button>
 
       <Button className="feedback-main-header__button" theme="primary">
         <Icon iconName="plus" />
