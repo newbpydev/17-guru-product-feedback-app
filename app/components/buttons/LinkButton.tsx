@@ -10,6 +10,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   to: string;
   styleType?: "default" | "dark-mode";
   icon?: IconType;
+  iconColor?: string;
 }
 
 //* COMPONENT: LinkButton
@@ -19,6 +20,7 @@ export default function LinkButton({
   to,
   styleType = "default",
   icon,
+  iconColor,
   ...rest
 }: Props) {
   const clsNames = classNames("link-button", className, styleType);
@@ -26,7 +28,7 @@ export default function LinkButton({
   // output
   return (
     <Link to={to} className={clsNames} {...rest}>
-      {icon && <Icon iconName={icon} />} {children}
+      {icon && <Icon iconName={icon} fill={iconColor} />} {children}
     </Link>
   );
 }

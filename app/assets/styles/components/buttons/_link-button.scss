@@ -1,1 +1,12 @@
-.link-button {}
+@use '../../abstract/mixins' as m;
+
+.link-button {
+  @include m.heading(h4) {
+    text-decoration: underline;
+    transition: color .2s ease-out;
+  }
+
+  &:hover {
+    color: #8397F8;
+  }
+}

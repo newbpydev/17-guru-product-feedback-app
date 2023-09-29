@@ -1,0 +1,40 @@
+@use '../../abstract/mixins' as m;
+
+.feedback-roadmap-card {
+  @include m.flex-container(column, space-between, stretch) {
+    gap: 2.4rem;
+  }
+
+
+  &__header {
+    @include m.flex-container(_, space-between) {}
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+  }
+
+  &__overview-list {
+    @include m.flex-container(column, stretch, stretch) {
+      gap: .8rem;
+    }
+  }
+
+  &__overview-item {
+    @include m.flex-container(row, space-between) {
+      gap: 1.6rem;
+    }
+
+    & .name {
+      justify-self: start;
+      align-self: start;
+      flex-grow: 1;
+    }
+
+    & .number {
+      font-weight: 700;
+    }
+  }
+}
