@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
+import Fade from "../animation/Fade";
 import FeedbackBoardCard from "../cards/FeedbackBoardCard";
 import FeedbackFilterCard from "../cards/FeedbackFilterCard";
 import FeedbackRoadmapCard from "../cards/FeedbackRoadmapCard";
@@ -9,7 +10,7 @@ type Props = {};
 
 //* COMPONENT: FeedbackSideNav
 export default function FeedbackSideNav({}: Props) {
-  const [isOpened, setIsOpened] = useState(true);
+  const [isOpened, setIsOpened] = useState(false);
 
   // output
   return (
@@ -32,7 +33,7 @@ export default function FeedbackSideNav({}: Props) {
         )}
       </div>
 
-      {isOpened && (
+      <Fade in={isOpened}>
         <div className="feedback-side-nav__menu-wrapper">
           <div className="feedback-side-nav__filter-map-wrapper">
             <FeedbackFilterCard />
@@ -40,7 +41,19 @@ export default function FeedbackSideNav({}: Props) {
             <FeedbackRoadmapCard />
           </div>
         </div>
-      )}
+      </Fade>
+
+      {/* {isOpened && (
+        <Fade in={isOpened}>
+          <div className="feedback-side-nav__menu-wrapper">
+            <div className="feedback-side-nav__filter-map-wrapper">
+              <FeedbackFilterCard />
+
+              <FeedbackRoadmapCard />
+            </div>
+          </div>
+        </Fade>
+      )} */}
     </aside>
   );
 }
