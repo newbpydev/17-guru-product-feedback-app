@@ -3,3 +3,12 @@
 @use 'base/reset';
 @use 'base/typography';
 @use 'base/base';
+
+@use 'components/index';
+
+@use "pages/feedback-details-page";
+@use "pages/feedback-edit-page";
+@use "pages/feedback-new-page";
+@use "pages/feedback-page";
+@use "pages/roadmap-page";
+// @use "pages";

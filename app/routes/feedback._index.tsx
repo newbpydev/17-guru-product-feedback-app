@@ -11,6 +11,8 @@ export default function FeedbackPage() {
       <FeedbackSideNav />
 
       <FeedbackMainNav />
+
+      <section className="feedback-page__suggestions">card</section>
     </main>
   );
 }
