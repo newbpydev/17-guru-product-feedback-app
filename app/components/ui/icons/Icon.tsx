@@ -9,7 +9,8 @@ interface Props extends React.HTMLAttributes<HTMLSpanElement> {
     | "comments"
     | "edit-feedback"
     | "new-feedback"
-    | "plus";
+    | "plus"
+    | "circle";
 
   customHeight?: number;
   customWidth?: number;
@@ -56,6 +57,7 @@ export default function Icon({
         </svg>
       );
       break;
+
     case "arrow-down":
       icon = (
         <svg
@@ -69,6 +71,7 @@ export default function Icon({
         </svg>
       );
       break;
+
     case "arrow-left":
       icon = (
         <svg
@@ -86,6 +89,7 @@ export default function Icon({
         </svg>
       );
       break;
+
     case "arrow-up":
       icon = (
         <svg
@@ -103,6 +107,7 @@ export default function Icon({
         </svg>
       );
       break;
+
     case "check":
       icon = (
         <svg
@@ -119,6 +124,7 @@ export default function Icon({
         </svg>
       );
       break;
+
     case "comments":
       icon = (
         <svg
@@ -134,6 +140,7 @@ export default function Icon({
         </svg>
       );
       break;
+
     case "edit-feedback":
       icon = (
         <svg
@@ -166,6 +173,7 @@ export default function Icon({
         </svg>
       );
       break;
+
     case "new-feedback":
       icon = (
         <svg
@@ -199,6 +207,20 @@ export default function Icon({
       );
       break;
 
+    case "circle":
+      icon = (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={customWidth || "8"}
+          height={customHeight || "8"}
+          viewBox="0 0 8 8"
+          fill="none"
+        >
+          <circle cx="4" cy="4" r="4" fill={fill || "#AD1FEA"} />
+        </svg>
+      );
+      break;
+
     default:
       icon = (
         <svg
@@ -224,5 +246,5 @@ export default function Icon({
   }
 
   // output
-  return <div {...rest}>{icon}</div>;
+  return <span {...rest}>{icon}</span>;
 }

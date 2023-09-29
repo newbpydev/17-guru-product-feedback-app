@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 
+import Icon from "../ui/icons/Icon";
 import Card from "./Card";
 
 type Props = {};
@@ -18,7 +19,9 @@ export default function FeedbackRoadmapCard({}: Props) {
 
       <div className="feedback-roadmap-card__overview-list">
         <p className="feedback-roadmap-card__overview-item">
-          <span className="dot">⚽</span>
+          <span className="dot">
+            <Icon iconName="circle" />
+          </span>
           <span className="name">Planned</span>
           <span className="number">2</span>
         </p>

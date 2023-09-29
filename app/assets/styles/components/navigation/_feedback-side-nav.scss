@@ -10,10 +10,18 @@
     z-index: 10;
   }
 
-  & svg {
+  // .feedback-side-nav__icon>svg:nth-child(1)
+
+  &__icon>svg {
     position: absolute;
     top: 2.737rem;
     right: 2.4rem;
+    cursor: pointer;
+    transition: opacity .2s ease-out;
+
+    &:hover {
+      opacity: .8;
+    }
 
     @include m.media-query(48em) {
       display: none;

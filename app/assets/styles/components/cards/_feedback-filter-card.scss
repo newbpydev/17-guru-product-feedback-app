@@ -2,9 +2,11 @@
 
 .feedback-filter-card {
   width: 22.3rem;
+  padding-bottom: 3.6rem;
 
-  @include m.flex-container() {
+  @include m.flex-container(row, start) {
     gap: .8rem;
+    row-gap: 1.4rem;
     flex-wrap: wrap;
   }
 
