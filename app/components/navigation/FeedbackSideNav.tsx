@@ -1,10 +1,14 @@
 import { useState } from "react";
 
+import { useLoaderData } from "@remix-run/react";
+
 import Fade from "../animation/Fade";
 import FeedbackBoardCard from "../cards/FeedbackBoardCard";
 import FeedbackFilterCard from "../cards/FeedbackFilterCard";
 import FeedbackRoadmapCard from "../cards/FeedbackRoadmapCard";
 import Icon from "../ui/icons/Icon";
+
+import type { ProductRequest } from "~/types/data.type";
 
 type Props = {};
 

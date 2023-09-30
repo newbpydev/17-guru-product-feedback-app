@@ -1,4 +1,8 @@
 .feedback-page {
-  display: grid;
-  grid-template-columns: 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr;
+
+  &__suggestions {
+    padding: 3.2rem 2.4rem 5.5rem;
+  }
 }
